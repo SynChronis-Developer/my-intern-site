@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RouteX Travel</title>
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">RouteX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Services Section -->
+<section id="services" class="adventure-section text-center">
+<div class="services-bg-overlay"></div>
+  <div class="container position-relative">
+    <div class="container">
+      <p class="section-subtitle">OUR SERVICES</p>
+      <h2 class="section-title">Adventure Unleashed<br />Discover Your Next</h2>
+
+      <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-4">
+                <div class="service-card pointer" data-bs-toggle="modal" data-bs-target="#modal1">
+                  <div class="icon"><i class="bi bi-cup-hot-fill"></i></div>
+                  <h5>Food and Wine Tours</h5>
+                  <p>Curated cuisine & vineyard trips.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service-card pointer" data-bs-toggle="modal" data-bs-target="#modal2">
+                  <div class="icon"><i class="bi bi-globe2"></i></div>
+                  <h5>Travel Opportunities</h5>
+                  <p>Explore world with us.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service-card pointer" data-bs-toggle="modal" data-bs-target="#modal3">
+                  <div class="icon"><i class="bi bi-person-walking"></i></div>
+                  <h5>Solo Travel Planning</h5>
+                  <p>Freedom-focused solo adventures.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-4">
+                <div class="service-card pointer" data-bs-toggle="modal" data-bs-target="#modal4">
+                  <div class="icon"><i class="bi bi-scooter"></i></div>
+                  <h5>Urban Scooter Tours</h5>
+                  <p>Eco-ride city explorations.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service-card pointer" data-bs-toggle="modal" data-bs-target="#modal5">
+                  <div class="icon"><i class="bi bi-backpack4"></i></div>
+                  <h5>Backpacker Adventures</h5>
+                  <p>Budget travel for the bold.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="service-card pointer" data-bs-toggle="modal" data-bs-target="#modal6">
+                  <div class="icon"><i class="bi bi-water"></i></div>
+                  <h5>Marine Escapades</h5>
+                  <p>Snorkel, sail, and dive trips.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Arrows -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Gallery
+  <section id="gallery" class="bg-light py-5 text-center">
+    <div class="container">
+      <h3 class="mb-4">Explore Our Travel Moments</h3>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <img src="https://via.placeholder.com/120" class="img-thumbnail pointer" />
+        <img src="https://via.placeholder.com/120" class="img-thumbnail pointer" />
+        <img src="https://via.placeholder.com/120" class="img-thumbnail pointer" />
+        <img src="https://via.placeholder.com/120" class="img-thumbnail pointer" />
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Footer -->
+  <footer id="footer" class="footer-section pt-5 pb-4">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-4">
+          <h4>RouteX</h4>
+          <p class="small">Corporate business typically refers to large-scale enterprises or organized travel experiences.</p>
+          <div class="social-icons d-flex gap-2 pointer">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-pinterest"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h6>Service Menu</h6>
+          <ul class="list-unstyled small">
+            <li>✔ Mistakes To Avoid</li>
+            <li>✔ Your Startup</li>
+            <li>✔ Knew About Fonts</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6>Useful Links</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Latest News</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Gallery</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <img src="travelimage1.jpg" class="img-thumbnail pointer" />
+            <img src="travelimage2.jpg" class="img-thumbnail pointer" />
+            <img src="travelimage3.jpg" class="img-thumbnail pointer" />
+            <img src="travelimage4.jpg" class="img-thumbnail pointer" />
+            <img src="travelimage5.jpeg" class="img-thumbnail pointer" />
+            <img src="travelimage6.jpeg" class="img-thumbnail pointer" />
+          </div>
+        </div>
+      </div>
+      <div class="text-center pt-4 border-top mt-4 small">
+        © RRDevs 2024 | <a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals (Responsive, human-designed, not fullscreen) -->
+<div class="modal fade modal-custom-size" id="modal1" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Food and Wine Tours</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Embark on a culinary journey through the most beautiful wine regions. Enjoy curated food tastings, vineyard walks, and hands-on cooking classes with expert chefs. Perfect for food lovers and wine connoisseurs seeking immersive local experiences.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal-custom-size" id="modal2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Travel Opportunities</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Unlock flexible travel plans to top global destinations. Our packages include cultural immersion, guided sightseeing, and exclusive discounts. Designed for both solo and group travelers who want hassle-free exploration.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal-custom-size" id="modal3" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Solo Travel Planning</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Customized itineraries tailored for independent travelers. We help you plan safe and enriching solo adventures with insider tips, local guides, and emergency support to ensure freedom with security.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal-custom-size" id="modal4" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Urban Scooter Tours</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Glide through iconic city streets on eco-friendly scooters. These tours offer a modern way to explore urban landscapes while learning history, visiting cafes, and discovering hidden gems with local guides.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal-custom-size" id="modal5" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Backpacker Adventures</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Experience budget-friendly travel across continents. We connect you with hostel stays, community guides, offbeat treks, and budget itineraries crafted for bold adventurers on a mission to explore more for less.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade modal-custom-size" id="modal6" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Marine Escapades</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Dive into the deep blue with our marine adventure trips. Whether it's snorkeling, scuba diving, or sailing crystal-clear waters, you’ll encounter vibrant marine life and serene ocean escapes guided by certified experts.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>

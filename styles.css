@@ -1,0 +1,494 @@
+/* ------------------ Root Variables ------------------ */
+:root {
+  --font-base: 'Segoe UI', sans-serif;
+
+  /* Colors */
+  --color-bg: #f7f9f9;
+  --color-primary: #198754;
+  --color-primary-dark: #145c36;
+  --color-accent: #c8facc;
+  --color-white: #ffffff;
+  --color-light-green: #e6f4ea;
+  --color-lighter-green: #d0f0e0;
+  --color-gradient: linear-gradient(to right, #d0f0e0, #f0fdf4);
+  --color-footer: #003300;
+  --color-footer-text: #ccc;
+
+  /* Shadows */
+  --shadow-base: 0 10px 25px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 40px rgba(0, 128, 0, 0.15);
+  --shadow-img: 0 5px 20px rgba(255, 255, 255, 0.2);
+
+  /* Border radius */
+  --radius-md: 10px;
+  --radius-lg: 20px;
+
+  /* Transition */
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.4s ease;
+}
+
+/* ------------------ General Reset ------------------ */
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* ------------------ Navbar ------------------ */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+/*navbar-behavioral*/
+/* Hide Navbar when scrolling down */
+.navbar-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Reset to visible */
+#navbar {
+  transition: transform 0.6s ease-in-out;
+}
+
+
+/* ------------------ Services / Adventure ------------------ */
+.adventure-section {
+  background: var(--color-gradient);
+  padding: 6rem 0;
+  color: #222;
+}
+
+/* background-image */
+.adventure-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  z-index: 1;
+  pointer-events: none;
+  transition: background-image 1s ease-in-out;
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0) 60%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0) 60%);
+}
+
+
+
+.adventure-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ------------------ Services Titles ------------------ */
+/* ------------------ Services Section ------------------ */
+/* ------------------ Services Section ------------------ */
+.adventure-section {
+  background: var(--color-gradient);
+  padding: 6rem 0;
+  color: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✅ Background stays fixed but only inside section scope */
+.services-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed; /* ✅ This line makes it still */
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  z-index: 1;
+  pointer-events: none;
+  transition: background-image 1s ease-in-out;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 60%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0) 60%);
+}
+
+
+.adventure-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ------------------ Section Title with Typing ------------------ */
+.section-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  text-align: left;
+  color: #0f3e23;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--color-primary-dark);
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--color-primary-dark);
+  }
+}
+
+.section-subtitle {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* ------------------ Glass Default Card ------------------ */
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  transition: all var(--transition-medium);
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ------------------ Neumorphic Hover Effect Only ------------------ */
+.service-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow:
+    8px 8px 20px rgba(0, 0, 0, 0.2),
+    -8px -8px 20px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(25, 135, 84, 0.25);
+  border: 1px solid rgba(25, 135, 84, 0.35);
+}
+
+/* ------------------ Icon Styling ------------------ */
+.service-card .icon {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.8rem;
+  color: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-card:hover .icon {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ------------------ Carousel Arrows ------------------ */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  padding: 1rem;
+  transition: background-color var(--transition-fast);
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* ------------------ Responsive Fix ------------------ */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    width: 100%;
+    border-right: none;
+    white-space: normal;
+    animation: none;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    padding: 0.8rem;
+  }
+}
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 10px rgba(25, 135, 84, 0.2),
+    0 0 30px rgba(25, 135, 84, 0.3),
+    8px 8px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(25, 135, 84, 0.4);
+}
+
+/* Glowing Border */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: inherit;
+  background: linear-gradient(45deg, #b4f5cb, #28c76f);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  filter: blur(20px);
+}
+
+.service-card:hover::before {
+  opacity: 0.3;
+}
+
+.service-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.service-card .icon {
+  background: var(--color-light-green);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  transition: background var(--transition-fast);
+}
+
+.service-card:hover .icon {
+  background: var(--color-lighter-green);
+}
+
+/* ------------------ Carousl Arrows ------------------ */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  padding: 1rem;
+  transition: background-color var(--transition-fast);
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* ------------------ Footer Styling ------------------ */
+.footer-section {
+  background-color: var(--color-footer);
+  color: var(--color-footer-text);
+}
+
+.footer-section h4,
+.footer-section h6 {
+  font-weight: bold;
+  color: var(--color-accent);
+}
+
+.footer-section ul {
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  list-style: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-section ul li:hover {
+  color: var(--color-white);
+}
+
+.footer-section .social-icons a {
+  color: var(--color-accent);
+  margin-right: 12px;
+  font-size: 1.4rem;
+  display: inline-block;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.footer-section .social-icons a:hover {
+  transform: scale(1.2);
+  color: var(--color-white);
+}
+
+.footer-section .img-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: none;
+  padding: 0;
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-fast);
+}
+
+.footer-section .img-thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-img);
+}
+
+/* ------------------ Gallery ------------------ */
+#gallery h3 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+/* ------------------ Custom Modal ------------------ */
+.modal-custom-size .modal-dialog {
+  max-width: 800px;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.modal-custom-size .modal-content {
+  padding: 2rem 2.5rem;
+  background: linear-gradient(to top right, #ffffff, #eaffea);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  animation: modalFadeIn 0.4s ease-in-out;
+  position: relative;
+}
+
+.modal-custom-size .modal-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.8rem;
+}
+
+.modal-custom-size .modal-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--color-primary-dark);
+}
+
+.modal-custom-size .modal-body {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  padding-top: 1rem;
+}
+
+.modal-custom-size .modal-content::before,
+.modal-custom-size .modal-content::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.modal-custom-size .modal-content::before {
+  top: -20px;
+  right: -20px;
+  background: radial-gradient(circle, #c8facc55, transparent 60%);
+}
+
+.modal-custom-size .modal-content::after {
+  bottom: -30px;
+  left: -30px;
+  background: radial-gradient(circle, #d0f0e055, transparent 70%);
+}
+
+.modal-custom-size .modal-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ------------------ Media Quries ------------------ */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .footer-section .img-thumbnail {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-link {
+    padding: 8px 0;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    padding: 0.8rem;
+  }
+}
